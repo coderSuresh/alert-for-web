@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --success: #33691E;
+    --error: #B00020;
+    --warning: #F57C00;
+}
