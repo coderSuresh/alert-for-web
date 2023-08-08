@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Shishir Khatiwada, CoderSuresh" />
+  <title>Web Alert</title>
+  <link rel="stylesheet" href="dist/style.css" />
+  <script src="/dist/web-alert.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <button type="submit" class="btn" onclick="openPopup('success')">Submit</button>
+    <div class="popup" id="popup">
+      <img src="images/tick.png" alt="Tick Image" />
+      <h2>Thank You!</h2>
+      <p>Your details has been successfully submitted. Thanks!</p>
+      <button type="button" onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const popup = document.getElementById("popup");
+
+    function openPopup() {
+      popup.classList.add("open-popup");
+    }
+
+    function closePopup() {
+      popup.classList.remove("open-popup");
+    }
+  </script>
+</body>
+
+</html>
