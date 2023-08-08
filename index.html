@@ -20,12 +20,12 @@
     const btn = document.querySelector('.btn');
 
     btn.addEventListener("click", () => {
-      showAlert(
-        "Success",
-        "Your message has been sent successfully",
-        "success",
-        "Close",
-      )
+      showAlert({
+        title: "Success",
+        message: "This is a success alert",
+        level: "success",
+        button: "Close"
+      })
     })
   </script>
 </body>

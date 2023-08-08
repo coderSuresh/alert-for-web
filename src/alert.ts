@@ -20,7 +20,17 @@ alertContainer.appendChild(closeButton);
 
 document.body.appendChild(alertContainer);
 
-const showAlert = (title: string, message: string, level: string, button: string) => {
+type contents = {
+    title: string,
+    message: string,
+    level: string,
+    button: string
+}
+
+const showAlert = (popupContents: contents) => {
+    
+    const { title, message, level, button } = popupContents;
+
     closeButton.innerText = button;
     alertIcon.setAttribute('src', `/images/ic_${level}.png`);
     alertTitle.innerText = title;
