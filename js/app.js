@@ -1,7 +1,8 @@
+/*==============================for success popup================================*/
 
 // Function to show the popup
 let popup = document.getElementById("successPopup");
-    popup = document.getElementById("errorPopup");
+    
 
 // Function to open the popup
 function openPopup() {
@@ -11,7 +12,13 @@ function openPopup() {
 // Function to close the popup
 function closePopup() {
     popup.classList.remove("open-popup");
-}  
+}
+
+/*=========================for error popup========================*/
+// popup = document.getElementById("errorPopup");
+    
+
+
 
 
 
