@@ -23,7 +23,7 @@ document.body.appendChild(alertContainer);
 type contents = {
     title: string,
     message: string,
-    level: string,
+    level: 'success' | 'warning' | 'error',
     button: string
 }
 
