@@ -53,16 +53,15 @@
     transition: transform 0.4s, top 0.4s;
 }
 
-.open-popup {
+.popup.popup--show {
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
 }
 
-img {
+.popup__icon {
     width: 100px;
     margin-top: -50px;
-
 }
 
 .popup-content h2 {

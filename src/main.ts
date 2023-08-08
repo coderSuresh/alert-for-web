@@ -1,5 +1,3 @@
-const alerterBtn = document.querySelector('.btn_web_alert')!;
+import showAlert from "./alert";
 
-alerterBtn.addEventListener('click', () => {
-  alert('Alert from web');
-});
+export default showAlert;
