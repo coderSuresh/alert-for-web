@@ -38,7 +38,7 @@ const showAlert = (popupContents: contents) => {
     if (level !== 'success' && level !== 'warning' && level !== 'error') 
        level = 'success';
 
-    closeButton.innerText = button;
+    closeButton.innerText = button ? button : 'Close';
     alertIcon.setAttribute('src', `/images/ic_${level.toLowerCase()}.png`);
     alertTitle.innerText = title;
     alertMessage.innerText = message;
