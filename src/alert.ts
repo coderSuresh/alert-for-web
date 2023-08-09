@@ -11,7 +11,7 @@ const alertMessage = document.createElement('p');
 alertMessage.setAttribute('class', 'popup__message');
 
 const closeButton = document.createElement('button');
-closeButton.setAttribute('class', 'popup__close');
+closeButton.setAttribute('class', 'popup__close-btn');
 
 alertContainer.appendChild(alertIcon);
 alertContainer.appendChild(alertTitle);
@@ -35,8 +35,7 @@ const showAlert = (popupContents: contents) => {
     alertIcon.setAttribute('src', `/images/ic_${level}.png`);
     alertTitle.innerText = title;
     alertMessage.innerText = message;
-    alertContainer.setAttribute('class', `popup popup--${level}`);
-    alertContainer.setAttribute('class', 'popup popup--show');
+    alertContainer.setAttribute('class', `popup popup--${level} popup--show`);
 }
 
 closeButton.addEventListener('click', () => {
