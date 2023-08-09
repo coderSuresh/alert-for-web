@@ -36,10 +36,10 @@ const showAlert = (popupContents: contents) => {
     }
 
     if (level !== 'success' && level !== 'warning' && level !== 'error') 
-       level = 'success';
+        level = 'success';
 
     closeButton.innerText = button ? button : 'Close';
-    alertIcon.setAttribute('src', `/node_modules/alert-for-web/dist/images/ic_${level.toLowerCase()}.png`);
+    alertIcon.setAttribute('src', `./node_modules/alert-for-web/dist/images/ic_${level.toLowerCase()}.png`);
     alertTitle.innerText = title;
     alertMessage.innerText = message;
     alertContainer.setAttribute('class', `popup popup--${level.toLowerCase()} popup--show`);

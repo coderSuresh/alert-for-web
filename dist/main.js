@@ -17,7 +17,7 @@ const i = (a) => {
   let { title: l, message: c, level: t, button: o } = a;
   if (!l || !c || !t || !o)
     throw new Error("title, message, level, button are required");
-  t !== "success" && t !== "warning" && t !== "error" && (t = "success"), s.innerText = o || "Close", n.setAttribute("src", `/node_modules/alert-for-web/dist/images/ic_${t.toLowerCase()}.png`), p.innerText = l, r.innerText = c, e.setAttribute("class", `popup popup--${t.toLowerCase()} popup--show`);
+  t !== "success" && t !== "warning" && t !== "error" && (t = "success"), s.innerText = o || "Close", n.setAttribute("src", `./node_modules/alert-for-web/dist/images/ic_${t.toLowerCase()}.png`), p.innerText = l, r.innerText = c, e.setAttribute("class", `popup popup--${t.toLowerCase()} popup--show`);
 };
 s.addEventListener("click", () => {
   e.setAttribute("class", "popup");
