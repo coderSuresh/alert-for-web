@@ -18,5 +18,8 @@
   },
   "dependencies": {
     "alert-for-web": "^0.0.3"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
