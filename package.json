@@ -1,8 +1,12 @@
 {
-  "name": "web-alert",
-  "private": true,
-  "version": "0.0.0",
+  "name": "alert-for-web",
+  "version": "0.0.2",
   "type": "module",
+  "files": [
+    "dist/main.js",
+    "dist/style.css",
+    "dist/images/* "
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
