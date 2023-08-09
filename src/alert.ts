@@ -29,13 +29,20 @@ type contents = {
 
 const showAlert = (popupContents: contents) => {
     
-    const { title, message, level, button } = popupContents;
+    let { title, message, level, button } = popupContents;
+
+    if (!title || !message || !level || !button) {
+        throw new Error('title, message, level, button are required');
+    }
+
+    if (level !== 'success' && level !== 'warning' && level !== 'error') 
+       level = 'success';
 
     closeButton.innerText = button;
-    alertIcon.setAttribute('src', `/images/ic_${level}.png`);
+    alertIcon.setAttribute('src', `/images/ic_${level.toLowerCase()}.png`);
     alertTitle.innerText = title;
     alertMessage.innerText = message;
-    alertContainer.setAttribute('class', `popup popup--${level} popup--show`);
+    alertContainer.setAttribute('class', `popup popup--${level.toLowerCase()} popup--show`);
 }
 
 closeButton.addEventListener('click', () => {
