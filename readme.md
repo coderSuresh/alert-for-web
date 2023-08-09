@@ -1,6 +1,5 @@
 # Web Alert - Show alert message on web page
 
-## Description
 This is a simple script that shows an alert message on a web page. It can be used to show a message on a web page when a certain event occurs. For example, when a backup is completed, or when a long running process is finished.
 
 ## installation
