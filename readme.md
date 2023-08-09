@@ -1,5 +1,8 @@
 # Alert for Web - Show alert message on web page
 
+[![npm version](https://badge.fury.io/js/alert-for-web.svg)](https://badge.fury.io/js/alert-for-web)
+[![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+
 This is a simple script that shows an alert message on a web page. It can be used to show a message on a web page when a certain event occurs. For example, when a backup is completed, or when a long running process is finished.
 
 ## installation
