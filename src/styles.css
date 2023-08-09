@@ -99,8 +99,6 @@
     background-color: var(--btn-bg-hover-color);
 }
 
-
-
 .popup--error {
     background: var(--error-bg-color);
 }
@@ -121,7 +119,6 @@
 .popup--error .popup__close-btn:hover {
     background-color: var(--error-btn-hover-color);
 }
-
 
 .popup--warning {
     background: var(--warning-bg-color);
