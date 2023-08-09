@@ -1,18 +1,35 @@
-# Web Alert - Show alert message on web page
+# Alert for Web - Show alert message on web page
 
 This is a simple script that shows an alert message on a web page. It can be used to show a message on a web page when a certain event occurs. For example, when a backup is completed, or when a long running process is finished.
 
 ## installation
 
 ```
-npm install web-alert
+npm install alert-for-web
 ```
 
 ## Usage
 
+``index.html``
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alert for Web</title>
+    <!-- package css -->
+    <link rel="stylesheet" href="/node_modules/alert-for-web/dist/style.css">
+    <script src="app.js" type="module">
+  </head>
+  <body>
+    <button class="btn">Show Alert</button>
+  </body>
+```
+
+``app.js ``
 ```javascript
 //import package
-import showAlert from "./dist/main.js";
+import showAlert from "/node_modules/alert-for-web/dist/main.js";
 
     //use any element to trigger the alert
     const btn = document.querySelector('.btn');
