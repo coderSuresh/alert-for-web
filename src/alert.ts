@@ -39,7 +39,7 @@ const showAlert = (popupContents: contents) => {
        level = 'success';
 
     closeButton.innerText = button ? button : 'Close';
-    alertIcon.setAttribute('src', `/images/ic_${level.toLowerCase()}.png`);
+    alertIcon.setAttribute('src', `/node_modules/alert-for-web/dist/images/ic_${level.toLowerCase()}.png`);
     alertTitle.innerText = title;
     alertMessage.innerText = message;
     alertContainer.setAttribute('class', `popup popup--${level.toLowerCase()} popup--show`);
