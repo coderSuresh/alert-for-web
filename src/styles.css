@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins&display=swap');
 
-:root{
-    --bg-color:#3c5077;
-    --button-bg-color:#fff;
-    --content-color:#333;
-    --button-bg-color-2:#3ce43c;
-    --btn-bg-hover-color:#38f038eb;
+:root {
+    --bg-color: #3c5077;
+    --button-bg-color: #fff;
+    --content-color: #333;
+    --button-bg-color-2: #3ce43c;
+    --btn-bg-hover-color: #38f038eb;
+
+
+                    /* For error alert */
+
+    --error-bg-color: #ffcccc; /* Error alert background color */
+    --error-title-color: #ff4d4d; /* Error alert title color */
+    --error-btn-bg-color: #ff4d4d; /* Error alert button background color */
+    --error-btn-hover-color: #ff1a1a; /* Error alert button hover background color */
 }
 
 * {
@@ -26,7 +34,7 @@
 
 .btn {
     padding: 10px 60px;
-    background:var(--button-bg-color);
+    background: var(--button-bg-color);
     width: fit-content;
     border: 0;
     outline: none;
@@ -53,7 +61,7 @@
     transition: transform 0.4s, top 0.4s;
 }
 
-.popup.popup--show {
+.popup--show {
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -62,15 +70,20 @@
 .popup__icon {
     width: 100px;
     margin-top: -50px;
-}
+} 
 
-.popup-content h2 {
+.popup__title {
     font-size: 38px;
     font-weight: 500;
     margin: 30px 0 10px;
 }
 
-button {
+.popup__text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.popup__close-btn {
     width: 100%;
     margin-top: 40px;
     padding: 10px 30px;
@@ -84,6 +97,30 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color:var(--btn-bg-hover-color) ;
+.popup__close-btn:hover {
+    background-color: var(--btn-bg-hover-color);
 }
+
+/* for error popup */
+
+.popup--error {
+    background: var(--error-bg-color);
+}
+
+.popup--error .popup__icon {
+    width: 80px;
+    margin-top: -40px;
+}
+
+.popup--error .popup__title {
+    color: var(--error-title-color);
+}
+
+.popup--error .popup__close-btn {
+    background-color: var(--error-btn-bg-color);
+}
+
+.popup--error .popup__close-btn:hover {
+    background-color: var(--error-btn-hover-color);
+}
+
