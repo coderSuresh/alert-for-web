@@ -8,12 +8,27 @@
     --btn-bg-hover-color: #38f038eb;
 
 
-                    /* For error alert */
+    /* For error alert */
 
-    --error-bg-color: #ffcccc; /* Error alert background color */
-    --error-title-color: #ff4d4d; /* Error alert title color */
-    --error-btn-bg-color: #ff4d4d; /* Error alert button background color */
-    --error-btn-hover-color: #ff1a1a; /* Error alert button hover background color */
+    --error-bg-color: #ffcccc;
+    /* Error alert background color */
+    --error-title-color: #ff4d4d;
+    /* Error alert title color */
+    --error-btn-bg-color: #ff4d4d;
+    /* Error alert button background color */
+    --error-btn-hover-color: #ff1a1a;
+    /* Error alert button hover background color */
+
+    /* For warning alert */
+
+    --warning-bg-color: #ffe066;
+    /* Warning alert background color */
+    --warning-title-color: #e69e00;
+    /* Warning alert title color */
+    --warning-btn-bg-color: #e69e00;
+    /* Warning alert button background color */
+    --warning-btn-hover-color: #d68e00;
+    /* Warning alert button hover background color */
 }
 
 * {
@@ -70,7 +85,7 @@
 .popup__icon {
     width: 100px;
     margin-top: -50px;
-} 
+}
 
 .popup__title {
     font-size: 38px;
@@ -124,3 +139,25 @@
     background-color: var(--error-btn-hover-color);
 }
 
+/* for warning popup */
+
+.popup--warning {
+    background: var(--warning-bg-color);
+}
+
+.popup--warning .popup__icon {
+    width: 80px;
+    margin-top: -40px;
+}
+
+.popup--warning .popup__title {
+    color: var(--warning-title-color);
+}
+
+.popup--warning .popup__close-btn {
+    background-color: var(--warning-btn-bg-color);
+}
+
+.popup--warning .popup__close-btn:hover {
+    background-color: var(--warning-btn-hover-color);
+}
