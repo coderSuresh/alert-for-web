@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Shishir Khatiwada, CoderSuresh" />
+  <title>Web Alert</title>
+  <link rel="stylesheet" href="dist/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <button type="submit" class="btn">Submit</button>
+  </div>
+
+  <script type="module">
+    import showAlert from "./dist/main.js";
+
+    const btn = document.querySelector('.btn');
+
+    btn.addEventListener("click", () => {
+      showAlert({
+        title: "Success",
+        message: "This is a success alert",
+        level: "success",
+        button: "Close"
+      })
+    })
+  </script>
+</body>
+
+</html>
