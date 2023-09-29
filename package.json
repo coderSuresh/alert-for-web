@@ -1,11 +1,10 @@
 {
   "name": "alert-for-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "files": [
     "dist/main.js",
-    "dist/style.css",
-    "dist/images/* "
+    "dist/style.css"
   ],
   "scripts": {
     "dev": "vite",
