@@ -5,28 +5,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Shishir Khatiwada, CoderSuresh" />
+  <meta name="description"
+    content="Are you searching for the best lightweight npm package to show alert for web? Well, here it is. Try now and you won't regret." />
   <title>Web Alert</title>
-  <link rel="stylesheet" href="https://www.unpkg.com/alert-for-web@0.1.1/dist/style.css" />
+  <link rel="stylesheet" href="https://www.unpkg.com/alert-for-web@0.1.2/dist/style.css" />
+
+  <!-- styles for demo page -->
+  <style>
+    .flex {
+      display: flex;
+      align-items: center;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .padding {
+      padding: 10px 80px;
+    }
+
+    @media (max-width: 768px) {
+      .padding {
+        padding: 10px;
+      }
+
+      main {
+        margin: 20px;
+      }
+    }
+
+    .logo-text {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .text-sm {
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    main {
+      max-width: 768px;
+      width: 100%;
+      margin: 40px auto;
+      text-align: center;
+    }
+
+    .my-10 {
+      margin: 10px auto;
+    }
+
+    .my-40 {
+      margin: 40px auto;
+    }
+
+    .open-source-text {
+      font-weight: 600;
+    }
+
+    .btn {
+      padding: 7px 20px;
+      border-radius: 5px;
+      background-color: rgb(64, 73, 82);
+      color: #fff;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      outline: 4px solid rgba(64, 73, 82, 0.356);
+    }
+  </style>
+
 </head>
 
 <body>
-  <div class="container">
-    <button type="submit" class="btn">Submit</button>
-  </div>
+
+  <header class="flex justify-between padding">
+    <div>
+      <p class="logo-text">Alert for Web</p>
+      <p class="text-sm">Lightweight and easy to use alert for web</p>
+    </div>
+
+    <a href="https://github.com/codersuresh/alert-for-web">
+      <img src="https://img.shields.io/github/stars/codersuresh/alert-for-web?style=social"
+        alt="a badge showing stars on github" 
+        height="20"
+        width="80"/>
+    </a>
+  </header>
+
+  <hr>
+
+  <main class="padding">
+
+    <h2>Alert for Web</h2>
+    <p class="my-10">Now show attractive alert dialog on your web with alert for web npm package. It is very
+      lightweight, it just does
+      what it is meant to do i.e. to show alert dialog on the web. No unnecessary files/functionalities included. And,
+      it is <span class="open-source-text">Open Source.</span></p>
+
+    <p class="my-40">You can select different levels to customize the alert. <a href="https://github.com/coderSuresh/alert-for-web#alert-for-web---show-alert-message-on-web-page" target="_blank">Read docs</a></p>
+
+    <form action="#" id="radio-form">
+      <div class="flex justify-between" style="max-width: 300px; margin: 10px auto;">
+        <div>
+          <input type="radio" name="level" value="success" id="success" checked>
+          <label for="success">Success</label>
+        </div>
+
+        <div>
+          <input type="radio" name="level" value="warning" id="warning">
+          <label for="warning">Warning</label>
+        </div>
+
+        <div>
+          <input type="radio" name="level" value="error" id="error">
+          <label for="error">Error</label>
+        </div>
+      </div>
+
+      <button class="btn">Show Alert</button>
+    </form>
+
+  </main>
 
   <script type="module">
-    import showAlert from "https://www.unpkg.com/alert-for-web@0.1.1/dist/main.js";
+    import showAlert from "https://www.unpkg.com/alert-for-web@0.1.2/dist/main.js";
 
     const btn = document.querySelector('.btn');
+    const formElem = document.getElementById('radio-form');
 
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // get value of selected radio button
+      const radioButtonElems = formElem.querySelectorAll('input[type=radio]')
+      let level;
+
+      radioButtonElems.forEach(radioBtn => {
+        if (radioBtn.checked) {
+          level = radioBtn.value
+        }
+      })
+
       showAlert({
         title: "Success",
         message: "This is a success alert",
-        level: "success",
+        level: level,
         button: "Close"
-      })
-    })
+      });
+    });
   </script>
 </body>
 
