@@ -1,5 +1,10 @@
+const popupBackgroundOverlay = document.createElement('div');
+popupBackgroundOverlay.setAttribute('class', 'popup__overlay');
+
 const alertContainer = document.createElement('div');
 alertContainer.setAttribute('class', 'popup');
+
+popupBackgroundOverlay.appendChild(alertContainer);
 
 const alertIcon = document.createElement('div');
 alertIcon.setAttribute('class', 'popup__icon');
@@ -57,7 +62,7 @@ alertContainer.appendChild(alertTitle);
 alertContainer.appendChild(alertMessage);
 alertContainer.appendChild(closeButton);
 
-document.body.appendChild(alertContainer);
+document.body.appendChild(popupBackgroundOverlay);
 
 type contents = {
     title: string,
@@ -98,10 +103,12 @@ const showAlert = (popupContents: contents) => {
     alertTitle.innerText = title;
     alertMessage.innerText = message;
     alertContainer.setAttribute('class', `popup popup--${level.toLowerCase()} popup--show`);
+    popupBackgroundOverlay.classList.add('visible')
 }
 
 closeButton.addEventListener('click', () => {
     alertContainer.setAttribute('class', 'popup');
+    popupBackgroundOverlay.classList.remove('visible')
 });
 
 export default showAlert;

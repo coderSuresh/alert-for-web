@@ -48,6 +48,20 @@
     border-radius: 30px;
 }
 
+.popup__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.popup__overlay.visible {
+    visibility: visible;
+}
+
 .popup {
     width: 400px;
     background: var(--button-bg-color);
