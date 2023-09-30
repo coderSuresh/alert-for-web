@@ -21,7 +21,7 @@ npm install alert-for-web
   <head>
     <title>Alert for Web</title>
     <!-- package css -->
-    <link rel="stylesheet" href="/node_modules/alert-for-web/dist/style.css">
+    <link rel="stylesheet" href="https://www.unpkg.com/alert-for-web@0.1.2/dist/style.css">
     <script src="app.js" type="module">
   </head>
   <body>
@@ -32,7 +32,7 @@ npm install alert-for-web
 ``app.js ``
 ```javascript
 //import package
-import showAlert from "/node_modules/alert-for-web/dist/main.js";
+import showAlert from "https://www.unpkg.com/alert-for-web@0.1.2/dist/main.js";
 
     //use any element to trigger the alert
     const btn = document.querySelector('.btn');
@@ -50,12 +50,12 @@ import showAlert from "/node_modules/alert-for-web/dist/main.js";
 
 ## Options
 
-| Option | Type | Default | Description |
-| ------ | ---- | ------- | ----------- |
-| title | string | null | The title of the alert |
-| message | string | null | The message of the alert |
-| level | string | success | The level of the alert. Possible values are: success, warning, error. |
-| button | string | Close | The text of the button |
+| Option | Type | Default | Optional | Description |
+| ------ | ---- | ------- | -------- | ----------- |
+| title | string | null | no | The title of the alert |
+| message | string | null | no | The message of the alert |
+| level | string | success | yes | The level of the alert. Possible values are: success, warning, error. |
+| button | string | Close | yes | The text of the button |
 
 ## License
 
